@@ -1,0 +1,20 @@
+{
+  "name": "Kettle",
+  "version": "1.2.2",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "kettle-firmware.ino.bin",
+          "offset": 65536
+        },
+        {
+          "path": "littlefs.bin",
+          "offset": 3211264
+        }
+      ]
+    }
+  ]
+}
