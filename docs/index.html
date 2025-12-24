@@ -108,6 +108,16 @@
 	.err {
 	  color: #ff9b9b;
 	}
+	.kettle-btn{
+	  padding: 10px 18px;
+	  border-radius: 999px;
+	  border: 0;
+	  cursor: pointer;
+	  font-weight: 700;
+	  color: #fff;
+	  background: #00a3ff; /* tweak if you want */
+	}
+	.kettle-btn:hover{ filter: brightness(1.05); }
   </style>
 </head>
 
@@ -151,7 +161,11 @@
 		const btn = document.createElement("esp-web-install-button");
 		// IMPORTANT: manifest path is relative to the site root (Pages root)
 		btn.setAttribute("manifest", info.manifest);
-		btn.setAttribute("install-label", "Install");
+		btn.innerHTML = `
+		  <button slot="activate" class="kettle-btn">Install</button>
+		  <span slot="unsupported">Use Chrome or Edge (Web Serial required).</span>
+		  <span slot="not-allowed">This page must be opened over HTTPS.</span>
+		`;
 
 		row.appendChild(left);
 		row.appendChild(btn);
