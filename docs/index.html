@@ -151,7 +151,7 @@
 		const btn = document.createElement("esp-web-install-button");
 		// IMPORTANT: manifest path is relative to the site root (Pages root)
 		btn.setAttribute("manifest", info.manifest);
-		btn.textContent = "Install";
+		btn.setAttribute("install-label", "Install");
 
 		row.appendChild(left);
 		row.appendChild(btn);
