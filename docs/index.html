@@ -72,13 +72,42 @@
     @media (max-width: 760px) {
       .brand-logo { display: none; }
     }
+	.card {
+	  background: rgba(16, 26, 46, 0.75);
+	  border-radius: 12px;
+	  padding: 18px;
+	  margin: 14px 0;
+	  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+	}
+
+	.row {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  gap: 16px;
+	}
+
+	.title {
+	  font-size: 18px;
+	  font-weight: 600;
+	}
+
+	.meta {
+	  font-size: 13px;
+	  color: var(--muted);
+	  margin-top: 4px;
+	}
+
+	.err {
+	  color: #ff9b9b;
+	}
   </style>
 </head>
 
   <body>
 	<header class="brand-header">
 	  <div class="brand-left">
-		<img class="brand-mark" src="./assets/vic-mark.png" alt="Vulture Investment Club">
+		<img class="brand-mark" src="./assets/kettle-icon.png" alt="Vulture Investment Club">
 		<div>
 		  <div class="brand-title">Kettle Flasher</div>
 		  <div class="brand-subtitle">Vulture Investment Club</div>
@@ -130,6 +159,9 @@
           el.innerHTML = `<p class="err">Failed to load release info: ${e}</p>`;
         }
       })();
+	  <script type="module"
+		src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+	  </script>
     </script>
   </body>
 </html>
