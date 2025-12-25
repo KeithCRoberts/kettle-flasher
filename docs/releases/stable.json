@@ -9,10 +9,6 @@
         {
           "path": "kettle-firmware.ino.bin",
           "offset": 65536
-        },
-        {
-          "path": "littlefs.bin",
-          "offset": 3211264
         }
       ]
     }
