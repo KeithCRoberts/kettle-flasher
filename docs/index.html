@@ -18,21 +18,6 @@
       --accent: #2f81f7;
     }
 	
-	body::before {
-	  content: "";
-	  position: fixed;
-	  inset: 0;
-	  pointer-events: none;
-	  z-index: -1;
-
-	  /* tiny dithering texture */
-	  background-image:
-		repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 4px),
-		repeating-linear-gradient(90deg, rgba(0,0,0,0.015) 0, rgba(0,0,0,0.015) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 4px);
-	  mix-blend-mode: overlay;
-	  opacity: 0.35;
-	}
-
     body {
       margin: 0;
       padding: 24px;
@@ -44,6 +29,19 @@
         var(--bg);
       color: var(--text);
     }
+	
+	html::before {
+	  content: "";
+	  position: fixed;
+	  inset: 0;
+	  pointer-events: none;
+	  z-index: 0;
+
+	  background-image: url("assets/noise.png");
+	  background-repeat: repeat;
+
+	  opacity: 0.04;   /* key tuning knob */
+	}
 
     .brand-header {
       display: flex;
@@ -138,8 +136,8 @@
 	  position: fixed;
 	  right: 40px;
 	  bottom: 40px;
-	  width: 260px;
-	  opacity: 0.08;
+	  width: 300px;
+	  opacity: 0.15;
 	  pointer-events: none;
 	  z-index: 0;
 	}
