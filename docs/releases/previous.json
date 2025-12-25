@@ -7,7 +7,7 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "kettle-firmware.ino.bin",
+          "path": "v1.0.0/kettle-firmware.ino.bin",
           "offset": 65536
         }
       ]
