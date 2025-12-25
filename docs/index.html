@@ -17,6 +17,21 @@
       --muted: #a8b3d6;
       --accent: #2f81f7;
     }
+	
+	body::before {
+	  content: "";
+	  position: fixed;
+	  inset: 0;
+	  pointer-events: none;
+	  z-index: -1;
+
+	  /* tiny dithering texture */
+	  background-image:
+		repeating-linear-gradient(0deg, rgba(255,255,255,0.015) 0, rgba(255,255,255,0.015) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 4px),
+		repeating-linear-gradient(90deg, rgba(0,0,0,0.015) 0, rgba(0,0,0,0.015) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 4px);
+	  mix-blend-mode: overlay;
+	  opacity: 0.35;
+	}
 
     body {
       margin: 0;
