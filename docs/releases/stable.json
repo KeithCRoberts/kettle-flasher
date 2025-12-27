@@ -7,12 +7,8 @@
       "chipFamily": "ESP32",
       "parts": [
         {
-          "path": "v1.1.0/kettle-firmware.ino.bin",
-          "offset": 65536
-        },
-		{
-          "path": "v1.1.0/littlefs.bin",
-          "offset": 3211264
+          "path": "v1.1.0/kettle-firmware.ino.merged.bin",
+          "offset": 0
         }
       ]
     }
