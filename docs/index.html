@@ -237,8 +237,8 @@
 		  const cfg = await r.json();
 
 		  el.textContent = "";
+		  el.appendChild(card("Beta", cfg.beta));
 		  el.appendChild(card("Stable", cfg.stable));
-		  el.appendChild(card("Previous", cfg.previous));
 		} catch (e) {
 		  el.innerHTML = `<p class="err">Failed to load release info: ${String(e)}</p>`;
 		  console.error(e);
